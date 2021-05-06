@@ -1,0 +1,18 @@
+<div class="container">
+  <select name="year" id="year" (click)="getYears()" (change)="getVehicleMake($event)">
+    <option value="selected year"> Select Year </option>
+    <option [value]="year" *ngFor="let year of years$ | async" > {{ year }} </option>
+  </select>
+  <select name="make" id="make" (change)="getVehicleModel($event)">
+    <option value="selected make"> Select Make </option>
+    <option [value]="make" *ngFor="let make of makes$ | async"> {{ make }} </option>
+  </select>
+  <select name="model" id="model" (change)="getVehicleTrim($event)">
+    <option value="selected model"> Select Model </option>
+    <option [value]="model" *ngFor="let model of models$ | async"> {{ model }} </option>
+  </select>
+  <select name="Trim" id="trim">
+    <option value="selected trim"> Select Trim </option>
+    <option [value]="trim" *ngFor="let trim of trims$ | async"> {{ trim }} </option>
+  </select>
+</div>
